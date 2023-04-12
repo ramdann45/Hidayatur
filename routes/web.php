@@ -93,6 +93,17 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    // PAKET UMROH RAMADHAN
+    Route::get('/umroh-ramadhan/paket-1', [UmrohController::class, 'paketSatu'])->name('paket.satu');
+    Route::get('/umroh-ramadhan/paket-2', [UmrohController::class, 'paketDua'])->name('paket.dua');
+    Route::get('/umroh-ramadhan/paket-3', [UmrohController::class, 'paketTiga'])->name('paket.tiga');
+    Route::get('/umroh-ramadhan/paket-4', [UmrohController::class, 'paketEmpat'])->name('paket.empat');
+    // CRUD
+    Route::post('/umroh-ramadhan/paket-1', [UmrohController::class, 'paketSatuUpdate'])->name('paket.satu.update');
+    Route::post('/umroh-ramadhan/paket-2', [UmrohController::class, 'paketDuaUpdate'])->name('paket.dua.update');
+    Route::post('/umroh-ramadhan/paket-3', [UmrohController::class, 'paketTigaUpdate'])->name('paket.tiga.update');
+    Route::post('/umroh-ramadhan/paket-4', [UmrohController::class, 'paketEmpatUpdate'])->name('paket.empat.update');
 });
 
 // BLOGS CONTROLLER

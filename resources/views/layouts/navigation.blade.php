@@ -164,23 +164,23 @@
                 </button>
                 <ul id="umroh" class="hidden py-2 space-y-2">
                     <li>
-                        <a href="{{ route('hero.image') }}"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('hero.image') ? 'text-blue-600' : 'text-gray-900' }}">
+                        <a href="{{ route('paket.satu') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('paket.satu') ? 'text-blue-600' : 'text-gray-900' }}">
                             Umroh Ramadhan 1</a>
                     </li>
                     <li>
-                        <a href="{{ route('penawaran.terbatas') }}"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('penawaran.terbatas') ? 'text-blue-600' : 'text-gray-900' }}">
+                        <a href="{{ route('paket.dua') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('paket.dua') ? 'text-blue-600' : 'text-gray-900' }}">
                             Umroh Ramadhan 2</a>
                     </li>
                     <li>
-                        <a href="{{ route('our.services') }}"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('our.services') ? 'text-blue-600' : 'text-gray-900' }}">Umroh
+                        <a href="{{ route('paket.tiga') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('paket.tiga') ? 'text-blue-600' : 'text-gray-900' }}">Umroh
                             Ramadhan 3</a>
                     </li>
                     <li>
-                        <a href="{{ route('wisata.terbaru') }}"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.terbaru') ? 'text-blue-600' : 'text-gray-900' }}">Umroh
+                        <a href="{{ route('paket.empat') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('paket.empat') ? 'text-blue-600' : 'text-gray-900' }}">Umroh
                             Ramadhan 4</a>
                     </li>
                 </ul>

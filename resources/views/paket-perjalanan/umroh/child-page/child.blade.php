@@ -14,7 +14,7 @@
 
         <section class="bg-white dark:bg-gray-900">
             <div class="gap-8 items-center px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 lg:px-6">
-                <img class="w-full" src="{{ $allPaket->img }}" alt="{{ $allPaket->nama }}">
+                <img class="w-full" src="{{ asset($allPaket->img) }}" alt="{{ $allPaket->nama }}">
                 <div class="mt-4 md:mt-0">
                     <section class="bg-white dark:bg-gray-900">
                         <div class="max-w-2xl px-4 py-8 mx-auto lg:py-8">
