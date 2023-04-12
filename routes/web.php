@@ -11,6 +11,7 @@ use App\Http\Controllers\UmrohController;
 use App\Http\Controllers\UmrohUzbekistanController;
 use App\Http\Controllers\UmrohDubaiController;
 use App\Http\Controllers\UmrohMesirController;
+use App\Http\Controllers\UmrohTurkiController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
@@ -127,6 +128,17 @@ Route::middleware('auth')->group(function () {
     Route::post('/umroh-mesir/paket-1', [UmrohMesirController::class, 'paketSatuUpdate'])->name('paket.satu.mesir.update');
     Route::post('/umroh-mesir/paket-2', [UmrohMesirController::class, 'paketDuaUpdate'])->name('paket.dua.mesir.update');
     Route::post('/umroh-mesir/paket-3', [UmrohMesirController::class, 'paketTigaUpdate'])->name('paket.tiga.mesir.update');
+
+    // PAKET UMROH TURKI
+    Route::get('/umroh-turki/paket-1', [UmrohTurkiController::class, 'paketSatu'])->name('paket.satu.turki');
+    Route::get('/umroh-turki/paket-2', [UmrohTurkiController::class, 'paketDua'])->name('paket.dua.turki');
+    Route::get('/umroh-turki/paket-3', [UmrohTurkiController::class, 'paketTiga'])->name('paket.tiga.turki');
+    Route::get('/umroh-turki/paket-4', [UmrohTurkiController::class, 'paketEmpat'])->name('paket.empat.turki');
+
+    Route::post('/umroh-turki/paket-1', [UmrohTurkiController::class, 'paketSatuUpdate'])->name('paket.satu.turki.update');
+    Route::post('/umroh-turki/paket-2', [UmrohTurkiController::class, 'paketDuaUpdate'])->name('paket.dua.turki.update');
+    Route::post('/umroh-turki/paket-3', [UmrohTurkiController::class, 'paketTigaUpdate'])->name('paket.tiga.turki.update');
+    Route::post('/umroh-turki/paket-4', [UmrohTurkiController::class, 'paketEmpatUpdate'])->name('paket.empat.turki.update');
 });
 
 // BLOGS CONTROLLER
