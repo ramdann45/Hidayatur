@@ -4,7 +4,7 @@
     top: 0;
     border-bottom: 2px solid #ccc;
     box-shadow: 0px 0px 5px #888;
-    z-index: 99;
+    z-index: 999;
 }
 
 .hero {
@@ -29,4 +29,155 @@
 /* PAKET ISLAMI STYLE */
 .paket-islami {
     margin: 10vh auto;
+}
+
+/* CLOCK */
+:root {
+    --primary-light: #8abdff;
+    --primary: #000;
+    --primary-dark: #000;
+    --white: #fff;
+    --greyLight-1: #e4ebf5;
+    --greyLight-2: #c8d0e7;
+    --greyLight-3: #bec8e4;
+    --greyDark: #9baacf;
+}
+
+.jam {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+/* Mengatur grid 6 kolom */
+.parent-clock {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+    margin: 2vh 0 5vh;
+}
+
+/* Mengatur grid 3 kolom pada layar mobile */
+@media screen and (max-width: 767px) {
+    .parent-clock {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        grid-auto-flow: dense;
+    }
+}
+
+.cover-clock h2 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.clock {
+    grid-column: 0.6666666667;
+    grid-row: 0.3333333333;
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    box-shadow: 0.15rem 0.15rem 0.3rem var(--greyLight-2), -0.1rem -0.1rem 0.25rem var(--white);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.clock .hand {
+    position: absolute;
+    transform-origin: bottom;
+    bottom: 50px;
+    border-radius: 0.1rem;
+    z-index: 200;
+}
+
+.clock .hours, .clock .hours-arab, .clock .hours-turki, .clock .hours-mesir, .clock .hours-uzbekistan, .clock .hours-china {
+    width: 0.2rem;
+    height: 1.3rem;
+    background: var(--greyLight-3);
+}
+
+.clock .minutes , .clock .minutes-arab, .clock .minutes-turki, .clock .minutes-mesir, .clock .minutes-uzbekistan, .clock .minutes-china {
+    width: 0.2rem;
+    height: 1.9rem;
+    background: var(--greyDark);
+}
+
+.clock .seconds, .clock .seconds-arab, .clock .seconds-turki, .clock .seconds-mesir, .clock .seconds-uzbekistan, .clock .seconds-china {
+    width: 0.1rem;
+    height: 2.2rem;
+    background: var(--primary);
+}
+
+.clock .point {
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background: var(--primary);
+    z-index: 300;
+}
+
+.clock .marker {
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0.1rem 0.1rem 0.25rem var(--greyLight-2), inset -0.1rem -0.1rem 0.25rem var(--white);
+}
+
+.clock .marker::after {
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    box-shadow: inset 0.5px 0.5px 0.5px var(--greyLight-2), inset -0.5px -0.5px 0.5px var(--white);
+    border-radius: 50%;
+    top: 20%;
+    left: 20%;
+    filter: blur(0.5px);
+}
+
+.clock .marker__1,
+.clock .marker__2,
+.clock .marker__3,
+.clock .marker__4 {
+    position: absolute;
+    border-radius: 0.05rem;
+    box-shadow: inset 0.5px 0.5px 0.5px var(--greyLight-2), inset -0.5px -0.5px 0.5px var(--white);
+}
+
+.clock .marker__1,
+.clock .marker__2 {
+    width: 0.1rem;
+    height: 0.3rem;
+    left: 2.8rem;
+}
+
+.clock .marker__3,
+.clock .marker__4 {
+    width: 0.3rem;
+    height: 0.1rem;
+    top: 2.8rem;
+}
+
+.clock .marker__1 {
+    top: 1%;
+}
+
+.clock .marker__2 {
+    top: 99%;
+    transform: translateY(-0.3rem);
+}
+
+.clock .marker__3 {
+    left: 1%;
+}
+
+.clock .marker__4 {
+    left: 99%;
+    transform: translateX(-0.3rem);
 }

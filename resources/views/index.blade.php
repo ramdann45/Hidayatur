@@ -56,7 +56,8 @@
                     class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
                     <svg aria-hidden="true" class="w-6 h-6 text-white dark:text-gray-800" fill="none"
                         stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7">
+                        </path>
                     </svg>
                     <span class="sr-only">Previous</span>
                 </span>
@@ -317,6 +318,154 @@
         </div>
     </section>
 
+    <section class="container mx-auto mb-5">
+        <h1 class="text-center jam">Jam Dunia &amp; Waktu Shalat</h1>
+        <div class="parent-clock mx-auto">
+            <div class="cover-clock mx-auto">
+                <h2>Indonesia</h2>
+                <div class="clock">
+                    <div class="hand hours"></div>
+                    <div class="hand minutes"></div>
+                    <div class="hand seconds"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-clock mx-auto">
+                <h2>Arab Saudi</h2>
+                <div class="clock">
+                    <div class="hand hours-arab"></div>
+                    <div class="hand minutes-arab"></div>
+                    <div class="hand seconds-arab"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-clock mx-auto">
+                <h2>Turki</h2>
+                <div class="clock">
+                    <div class="hand hours-turki"></div>
+                    <div class="hand minutes-turki"></div>
+                    <div class="hand seconds-turki"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-clock mx-auto">
+                <h2>Mesir</h2>
+                <div class="clock">
+                    <div class="hand hours-mesir"></div>
+                    <div class="hand minutes-mesir"></div>
+                    <div class="hand seconds-mesir"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-clock mx-auto">
+                <h2>Uzbekistan</h2>
+                <div class="clock">
+                    <div class="hand hours-uzbekistan"></div>
+                    <div class="hand minutes-uzbekistan"></div>
+                    <div class="hand seconds-uzbekistan"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="cover-clock mx-auto">
+                <h2>China</h2>
+                <div class="clock">
+                    <div class="hand hours-china"></div>
+                    <div class="hand minutes-china"></div>
+                    <div class="hand seconds-china"></div>
+                    <div class="point"></div>
+                    <div class="marker">
+                        <span class="marker__1"></span>
+                        <span class="marker__2"></span>
+                        <span class="marker__3"></span>
+                        <span class="marker__4"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 border">
+                <caption class="p-5 text-lg font-semibold text-left text-white bg-gray-800">
+                    Jakarta, Indonesia
+                    <p id="hari" class="mt-1 text-sm font-normal text-white"></p>
+                </caption>
+                <tbody>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Shubuh
+                        </th>
+                        <td class="px-6 py-4">
+                            04:45 AM
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Dzuhur
+                        </th>
+                        <td class="px-6 py-4">
+                            11:54 AM
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Ashar
+                        </th>
+                        <td class="px-6 py-4">
+                            03:13 PM
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Maghrib
+                        </th>
+                        <td class="px-6 py-4">
+                            05:54 PM
+                        </td>
+                    </tr>
+                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                            Isha
+                        </th>
+                        <td class="px-6 py-4">
+                            07:03 PM
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </section>
+
     <section class="bg-green-200">
         <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div class="mx-auto max-w-screen-md sm:text-center">
@@ -446,4 +595,7 @@
         const imagPop = document.getElementById("penawaran");
         lightGallery(imagPop);
     </script>
+
+    <script src="{{ asset('moment-js/moment.js') }}"></script>
+    <script src="{{ asset('moment-js/custom-clock.js') }}"></script>
 @endsection
