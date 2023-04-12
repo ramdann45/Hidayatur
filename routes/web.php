@@ -8,6 +8,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UmrohController;
+use App\Http\Controllers\UmrohUzbekistanController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
@@ -104,6 +105,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/umroh-ramadhan/paket-2', [UmrohController::class, 'paketDuaUpdate'])->name('paket.dua.update');
     Route::post('/umroh-ramadhan/paket-3', [UmrohController::class, 'paketTigaUpdate'])->name('paket.tiga.update');
     Route::post('/umroh-ramadhan/paket-4', [UmrohController::class, 'paketEmpatUpdate'])->name('paket.empat.update');
+
+    // PAKET UMROH UZBEKISTAN
+    Route::get('/umroh-uzbekistan/paket-1', [UmrohUzbekistanController::class, 'paketSatu'])->name('paket.satu.uzbekistan');
+    Route::post('/umroh-uzbekistan/paket-1', [UmrohUzbekistanController::class, 'paketSatuUpdate'])->name('paket.satu.uzbekistan.update');
 });
 
 // BLOGS CONTROLLER
