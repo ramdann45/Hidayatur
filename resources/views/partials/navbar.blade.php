@@ -57,7 +57,8 @@
                                     Plus Wisata</a>
                             </li>
                             <li>
-                                <a href="#" class="block px-4 py-2 hover:bg-gray-100"><i
+                                <a href="{{ route('wisata.islami') }}"
+                                    class="block px-4 py-2 hover:bg-gray-100 {{ Route::is('wisata.islami') ? 'text-blue-700' : '' }}"><i
                                         class="fa fa-book-quran"></i> Wisata
                                     Islami</a>
                             </li>

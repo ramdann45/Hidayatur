@@ -12,6 +12,8 @@ use App\Http\Controllers\UmrohUzbekistanController;
 use App\Http\Controllers\UmrohDubaiController;
 use App\Http\Controllers\UmrohMesirController;
 use App\Http\Controllers\UmrohTurkiController;
+use App\Http\Controllers\WisataIslamiController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
@@ -23,7 +25,11 @@ Route::post('/subscriber', [AdminController::class, 'subscriberUpload'])->name('
 
 
 Route::get('/dashboard', function () {
-    return view('admin.index');
+    $subs = DB::table('subscriber')->count();
+    $booking = DB::table('booking_tour')->count();
+    $notRespon = DB::table('booking_tour')->where('response', 0)->count();
+
+    return view('admin.index', compact('subs', 'booking', 'notRespon'));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -150,14 +156,23 @@ Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri.index');
 // CONTACT CONTROLLER
 Route::get('/contact-us', [ContactController::class, 'index'])->name('contact.index');
 
-// Paket Pekerjaan
-Route::get('/paket-pekerjaan/umroh', [UmrohController::class, 'index'])->name('umroh.index');
-Route::get('/paket-pekerjaan/umroh/{slug}', [UmrohController::class, 'childPage'])->name('umroh.child');
+// Paket Perjalanan
+Route::get('/paket-perjalanan/umroh', [UmrohController::class, 'index'])->name('umroh.index');
+Route::get('/paket-perjalanan/umroh/{slug}', [UmrohController::class, 'childPage'])->name('umroh.child');
 
-Route::get('/paket-pekerjaan/umroh-plus', [UmrohController::class, 'umrohPlus'])->name('umroh.plus.index');
-Route::get('/paket-pekerjaan/umroh-plus/uzbekistan/{slug}', [UmrohController::class, 'umrohPlusUzbekistan'])->name('umroh.plus.uzbekistan');
-Route::get('/paket-pekerjaan/umroh-plus/dubai/{slug}', [UmrohController::class, 'umrohPlusDubai'])->name('umroh.plus.dubai');
-Route::get('/paket-pekerjaan/umroh-plus/mesir/{slug}', [UmrohController::class, 'umrohPlusMesir'])->name('umroh.plus.mesir');
-Route::get('/paket-pekerjaan/umroh-plus/turki/{slug}', [UmrohController::class, 'umrohPlusTurki'])->name('umroh.plus.turki');
+Route::get('/paket-perjalanan/umroh-plus', [UmrohController::class, 'umrohPlus'])->name('umroh.plus.index');
+Route::get('/paket-perjalanan/umroh-plus/uzbekistan/{slug}', [UmrohController::class, 'umrohPlusUzbekistan'])->name('umroh.plus.uzbekistan');
+Route::get('/paket-perjalanan/umroh-plus/dubai/{slug}', [UmrohController::class, 'umrohPlusDubai'])->name('umroh.plus.dubai');
+Route::get('/paket-perjalanan/umroh-plus/mesir/{slug}', [UmrohController::class, 'umrohPlusMesir'])->name('umroh.plus.mesir');
+Route::get('/paket-perjalanan/umroh-plus/turki/{slug}', [UmrohController::class, 'umrohPlusTurki'])->name('umroh.plus.turki');
+
+Route::get('/paket-perjalanan/wisata-islami', [WisataIslamiController::class, 'index'])->name('wisata.islami');
+Route::get('/paket-perjalanan/wisata-islami/balkan', [WisataIslamiController::class, 'balkan'])->name('wisata.islami.balkan');
+Route::get('/paket-perjalanan/wisata-islami/mongolia', [WisataIslamiController::class, 'mongolia'])->name('wisata.islami.mongolia');
+Route::get('/paket-perjalanan/wisata-islami/beijing', [WisataIslamiController::class, 'beijing'])->name('wisata.islami.beijing');
+Route::get('/paket-perjalanan/wisata-islami/india', [WisataIslamiController::class, 'india'])->name('wisata.islami.india');
+Route::get('/paket-perjalanan/wisata-islami/dubai', [WisataIslamiController::class, 'dubai'])->name('wisata.islami.dubai');
+Route::get('/paket-perjalanan/wisata-islami/korea', [WisataIslamiController::class, 'korea'])->name('wisata.islami.korea');
+
 
 require __DIR__ . '/auth.php';
