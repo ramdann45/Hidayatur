@@ -12,33 +12,46 @@
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Resources</h2>
                     <ul class="text-white">
-                        <li class="mb-4">
-                            <a href="https://flowbite.com" class="hover:underline">Flowbite</a>
+                        <li class="mb-3">
+                            <a href="{{ route('blog.index') }}" class="hover:underline">Blogs</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="{{ route('galeri.index') }}" class="hover:underline">Galeri</a>
                         </li>
                         <li>
-                            <a href="https://tailwindcss.com/" class="hover:underline">Tailwind CSS</a>
+                            <a href="{{ route('contact.index') }}" class="hover:underline">Hubungi Kami</a>
                         </li>
                     </ul>
                 </div>
                 <div>
                     <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                     <ul class="text-white">
-                        <li class="mb-4">
-                            <a href="https://github.com/themesberg/flowbite" class="hover:underline ">Github</a>
+                        <li class="mb-3">
+                            <a href="https://www.instagram.com/hidayatur.id/" target="_blank"
+                                class="hover:underline">Instagram</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="https://www.tiktok.com/@hidayatur.id" target="_blank"
+                                class="hover:underline">Tiktok</a>
                         </li>
                         <li>
-                            <a href="https://discord.gg/4eeurUVvTy" class="hover:underline">Discord</a>
+                            <a href="https://www.youtube.com/channel/UC0SVIXma-_XpEkJTr6Eg8Cg" target="_blank"
+                                class="hover:underline">Youtube</a>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Legal</h2>
+                    <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase">Paket Perjalanan</h2>
                     <ul class="text-white">
-                        <li class="mb-4">
-                            <a href="#" class="hover:underline">Privacy Policy</a>
+                        <li class="mb-3">
+                            <a href="{{ route('umroh.index') }}" class="hover:underline">Umroh</a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="{{ route('umroh.plus.index') }}" class="hover:underline">Umroh
+                                Plus Wisata</a>
                         </li>
                         <li>
-                            <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+                            <a href="{{ route('wisata.islami') }}" class="hover:underline">Wisata Islami</a>
                         </li>
                     </ul>
                 </div>
