@@ -199,23 +199,23 @@
                 </button>
                 <ul id="wisata-islami" class="hidden py-2 space-y-2">
                     <li>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.balkan.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.balkan.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             Balkan</a>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.mongolia.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.mongolia.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             Mongolia</a>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.beijing.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.beijing.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             Beijing China</a>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.india.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.india.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             India</a>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.dubai.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.dubai.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             Dubai Abu Dhabi</a>
-                        <a href="#"
-                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100">Tour
+                        <a href="{{ route('wisata.islami.korea.admin') }}"
+                            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 {{ Route::is('wisata.islami.korea.admin') ? 'text-blue-600' : 'text-gray-900' }}">Tour
                             Korea Selatan</a>
                     </li>
                 </ul>

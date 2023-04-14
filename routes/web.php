@@ -145,6 +145,21 @@ Route::middleware('auth')->group(function () {
     Route::post('/umroh-turki/paket-2', [UmrohTurkiController::class, 'paketDuaUpdate'])->name('paket.dua.turki.update');
     Route::post('/umroh-turki/paket-3', [UmrohTurkiController::class, 'paketTigaUpdate'])->name('paket.tiga.turki.update');
     Route::post('/umroh-turki/paket-4', [UmrohTurkiController::class, 'paketEmpatUpdate'])->name('paket.empat.turki.update');
+
+    // WISATA ISLAMI
+    Route::get('/wisata-islami/tour-balkan', [WisataIslamiController::class, 'tourBalkan'])->name('wisata.islami.balkan.admin');
+    Route::get('/wisata-islami/tour-mongolia', [WisataIslamiController::class, 'tourMongolia'])->name('wisata.islami.mongolia.admin');
+    Route::get('/wisata-islami/tour-india', [WisataIslamiController::class, 'tourIndia'])->name('wisata.islami.india.admin');
+    Route::get('/wisata-islami/tour-beijing', [WisataIslamiController::class, 'tourBeijing'])->name('wisata.islami.beijing.admin');
+    Route::get('/wisata-islami/tour-dubai', [WisataIslamiController::class, 'tourDubai'])->name('wisata.islami.dubai.admin');
+    Route::get('/wisata-islami/tour-korea', [WisataIslamiController::class, 'tourKorea'])->name('wisata.islami.korea.admin');
+
+    Route::post('/wisata-islami/tour-balkan', [WisataIslamiController::class, 'tourBalkanUpdate'])->name('wisata.islami.balkan.admin.update');
+    Route::post('/wisata-islami/tour-mongolia', [WisataIslamiController::class, 'tourMongoliaUpdate'])->name('wisata.islami.mongolia.admin.update');
+    Route::post('/wisata-islami/tour-india', [WisataIslamiController::class, 'tourIndiaUpdate'])->name('wisata.islami.india.admin.update');
+    Route::post('/wisata-islami/tour-beijing', [WisataIslamiController::class, 'tourBeijingUpdate'])->name('wisata.islami.beijing.admin.update');
+    Route::post('/wisata-islami/tour-dubai', [WisataIslamiController::class, 'tourDubaiUpdate'])->name('wisata.islami.dubai.admin.update');
+    Route::post('/wisata-islami/tour-korea', [WisataIslamiController::class, 'tourKoreaUpdate'])->name('wisata.islami.korea.admin.update');
 });
 
 // BLOGS CONTROLLER
